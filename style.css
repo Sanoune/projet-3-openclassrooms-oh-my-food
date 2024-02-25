@@ -1,9 +1,150 @@
+/**************************** General **************************/
+body {
+  height: 100%;
+  margin: 0px;
+}
+* {
+  font-family: "roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.style-button {
+}
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+h1 {
+  margin: 0px;
+}
+.shadow {
+  box-shadow: 0 4px 15px 0px rgb(0 0 0 / 0.15);
+}
+
+/**************************** Header **************************/
+
+.centrer-header {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.location {
+  background-color: #f2f2f2;
+}
+
+/**************************** Session Information acceuil **************************/
+
+.information-acceuil {
+  background-color: #f2f2f2;
+  padding: 12px;
+  text-align: center;
+}
+/**************************** Session Fonctionnement **************************/
+
+.fonctionnement {
+  padding: 40px 10px;
+}
+
+.etapes {
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fonctionnement span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.fonctionnement .number {
+  background-color: #9356dc;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6f6;
+}
+
+.fonctionnement .box-etape {
+  background-color: #f6f6f6;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  margin-top: 12px;
+}
+
+.icone-etape {
+  padding-right: 25px;
+  padding-left: 15px;
+}
+
+/**************************** Session Restaurants **************************/
+.restaurant {
+  background-color: #f2f2f2;
+  padding: 12px 12px;
+}
+
+.restaurant article {
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 18px;
+}
+
 .images-plats {
   height: 120px;
   width: 100%;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
+  position: relative;
 }
 
-.button-explorer {
+.liens-cards-restaurants {
+  display: flex;
+  flex-direction: column;
+}
+
+.liens-cards-restaurants span {
+  position: absolute;
+  background-color: #99e2d0;
+  right: 42px;
+  padding: 6px;
+  margin: 12px;
+  color: #008766;
+}
+
+.box-texte-coeur {
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+  padding: 17px 14px;
+}
+
+.texte-restaurant h3,
+.texte-restaurant p {
+  margin: 0px;
+}
+
+.texte-restaurant {
+  flex: 1;
+}
+
+.box-footer {
+  padding: 12px 12px;
+}
+
+.box-footer img {
+  height: 27px;
 }
