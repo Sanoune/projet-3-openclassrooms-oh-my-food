@@ -1,0 +1,426 @@
+/**************************** General **************************/
+body {
+  height: 100%;
+  margin: 0px;
+}
+
+* {
+  font-family: "roboto", sans-serif;
+}
+
+.main {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.shadow {
+  box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+/**************************** Header **************************/
+.centrer-header {
+  justify-content: center;
+  padding: 12px;
+}
+
+.location {
+  background-color: #f2f2f2;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/**************************** Section Information acceuil **************************/
+.information-acceuil {
+  background-color: #f2f2f2;
+  padding: 53px 60px;
+  text-align: center;
+  box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.information-acceuil h3 {
+  font-weight: normal;
+}
+
+.style-button {
+  margin-top: 15px;
+  padding: 15px 50px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(to top left, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.style-button span {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.style-button:hover {
+  background-image: linear-gradient(to top left, rgb(170, 121, 230), rgb(238, 161, 215));
+  box-shadow: 10px 15px 16px #b1b0b0;
+  transition: opacity 0.5s;
+}
+
+/**************************** Section Fonctionnement **************************/
+.etapes {
+  margin: 12px;
+  flex-direction: column;
+}
+
+.fonctionnement {
+  padding: 40px 20px;
+}
+.fonctionnement span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.fonctionnement .number {
+  background-color: #9356dc;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -14px;
+  align-items: center;
+  justify-content: center;
+  color: #f6f6f6;
+}
+.fonctionnement .box-etape {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  margin-top: 12px;
+}
+
+.icone-etape {
+  padding-right: 25px;
+  padding-left: 15px;
+}
+
+/**************************** Section Restaurants **************************/
+.restaurant {
+  background-color: #f2f2f2;
+  padding: 80px 12px;
+}
+.restaurant article {
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 18px;
+}
+.restaurant .position-relative {
+  position: relative;
+}
+
+.images-plats {
+  height: 231px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.liens-cards-restaurants {
+  flex-direction: column;
+}
+.liens-cards-restaurants span {
+  position: absolute;
+  background-color: #99e2d0;
+  right: 42px;
+  padding: 6px;
+  margin: 12px;
+  color: #008766;
+}
+
+.box-texte-coeur {
+  align-items: center;
+  padding: 17px 14px;
+}
+
+.texte-restaurant {
+  flex: 1;
+}
+.texte-restaurant h3,
+.texte-restaurant p {
+  margin: 0px;
+}
+
+.input-coeur:checked + label .coeur-full {
+  opacity: 1;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
+}
+
+.input-coeur {
+  display: none;
+}
+
+.coeur {
+  opacity: 1;
+}
+
+.coeur-full {
+  opacity: 0;
+}
+
+.box-coeurs {
+  justify-content: center;
+  align-items: center;
+  padding: 21px;
+}
+.box-coeurs i {
+  font-size: 24px;
+}
+
+.box-coeurs * {
+  position: absolute;
+}
+
+.box-footer {
+  background-color: #353535;
+  padding: 24px;
+}
+.box-footer h3 {
+  font-weight: normal;
+  color: white;
+  font-family: "Shrikhand";
+  margin: 8px 0px;
+}
+.box-footer span {
+  color: white;
+}
+.box-footer i {
+  color: white;
+}
+
+.elements-footer {
+  flex-direction: column;
+  gap: 6px;
+  margin: 2px;
+}
+.elements-footer .element {
+  margin-left: -4px;
+  gap: 12px;
+}
+.elements-footer .span-footer {
+  margin-left: 8px;
+}
+
+.page-bis {
+  padding: 20px 20px;
+}
+
+.box-menu {
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0px 0px;
+  padding: 50px 20px;
+  width: auto;
+  position: relative;
+  top: -33px;
+}
+.box-menu h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: #99e2d0 solid 2px;
+  width: 50px;
+}
+
+.image-plat-restaurant {
+  width: 100%;
+  object-fit: cover;
+  height: 275px;
+}
+
+.page-individuelle {
+  background: white;
+}
+
+.box-plat {
+  background-color: #f6f6f6;
+}
+
+.texte-restaurant.page-bis {
+  background-color: #ffffff;
+  border-radius: 15.04px;
+  padding: 10px 12px;
+  margin-top: 12px;
+  align-items: end;
+}
+
+.a-page-bis {
+  align-self: center;
+}
+
+.box-logo-page-bis {
+  text-align: center;
+}
+
+.nom-restaurant-page-bis {
+  font-weight: normal;
+  font-family: "Shrikhand";
+}
+
+.box-choix-menu {
+  text-decoration: none;
+  flex: 1;
+  border-radius: 15.4px;
+  border: none;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.button-choix-menu {
+  background-color: transparent;
+  border: none;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.element1-button-menu {
+  flex-direction: column;
+  align-self: center;
+  padding: 12px;
+}
+
+.element2-button-menu {
+  align-self: end;
+  padding-bottom: 12px;
+  padding-right: 5px;
+}
+.element2-button-menu p {
+  margin: 0;
+}
+
+.box-choix-menu:hover .cloche-menu {
+  width: 50px;
+}
+
+.cloche-menu {
+  overflow: hidden;
+  justify-content: center;
+  transition: width 2s;
+  padding: 22px 0px;
+  border-radius: 0px 15.4px 15.4px 0px;
+  background-color: #99e2d0;
+  width: 0px;
+}
+.cloche-menu i {
+  color: #f2f2f2;
+  -webkit-text-fill-color: #f2f2f2;
+}
+
+.button-commander {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.animation-test:hover .agrandissement {
+  width: 200px;
+  height: 100px;
+}
+
+.scale-button {
+  background-color: blue;
+  transition-duration: 100ms;
+  transition-property: all;
+}
+
+.scale-button:hover {
+  transform: scale(1.2, 1.2);
+}
+
+@media (max-width: 768px) {
+  .restaurant {
+    padding: 40px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 70px;
+  }
+  .etapes {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1025px) {
+  .box-menu {
+    margin: -32px auto;
+    padding: 50px 250px;
+    max-width: 560px;
+  }
+  .image-plat-restaurant {
+    width: 100%;
+    aspect-ratio: 1440/435;
+    object-position: 0px -267px;
+    object-fit: cover;
+  }
+  .box-choix-menu {
+    max-width: 565px;
+  }
+  .restaurant {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .container {
+    width: 80%;
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
+  .etapes {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-etape {
+    max-width: 300px;
+  }
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+  }
+  .box-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+  .elements-footer {
+    display: flex;
+    flex-flow: row;
+    gap: 30px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
