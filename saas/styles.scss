@@ -1,4 +1,11 @@
 /**************************** General **************************/
+
+$cd-color-blanc: #f3f3f3;
+$cd-color-green-c: #99e2d0;
+$cd-color-green-f: #008766;
+$cd-color-blue: #003a68;
+$cd-color-violet: #9356dc;
+
 body {
   height: 100%;
   margin: 0px;
@@ -30,16 +37,88 @@ h1 {
   box-shadow: 0 4px 15px 0px rgb(0 0 0 / 0.15);
 }
 
+// @keyframes jump {
+//   0% {
+//     transform: translateY(0);
+//     background-color: #99e2d0;
+//   }
+//   50% {
+//     transform: translateY(-2rem);
+//     background-color: #61b6a1;
+//   }
+//   100% {
+//     transform: translateY(0);
+//     background-color: #398775;
+//   }
+// }
+
+// @keyframes out {
+//   0% {
+//     visibility: visible;
+//   }
+
+//   100% {
+//     visibility: hidden;
+//   }
+// }
+
+// .loader {
+//   position: fixed;
+//   height: 100%;
+//   width: 100%;
+//   left: 0;
+//   top: 0;
+//   background-color: hsla(0, 0%, 100%, 0.9);
+//   z-index: 10000;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   animation: out 0.2s 4s forwards;
+// }
+
+.loader-box {
+  gap: 40px;
+  display: flex;
+}
+
+.loader-box * {
+  animation: jump 1s 5;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.loader-element-1 {
+  background-color: #99e2d0;
+  animation-delay: 0.1s;
+}
+
+.loader-element-2 {
+  background-color: #99e2d0;
+  animation-delay: 0.2s;
+}
+
+.loader-element-3 {
+  background-color: #99e2d0;
+  animation-delay: 0.3s;
+}
+
+.loader-element-4 {
+  background-color: #99e2d0;
+  animation-delay: 0.4s;
+}
+
 /**************************** Header **************************/
 
 .centrer-header {
   justify-content: center;
-  padding: 12px;
+  padding: 30px;
 }
 
 .location {
   background-color: #f2f2f2;
   box-shadow: inset 0px 4px 4px 0px rgb(0 0 0 / 25%);
+  padding: 15px;
 }
 
 /**************************** Section Information acceuil **************************/
@@ -56,6 +135,7 @@ h1 {
 }
 
 .style-button {
+  transition: 1s;
   margin-top: 15px;
   padding: 15px 50px;
   border-radius: 25px;
@@ -66,7 +146,6 @@ h1 {
     rgb(147, 86, 220),
     rgb(255, 121, 218)
   );
-
   span {
     color: #ffffff;
     font-weight: bold;
@@ -76,14 +155,15 @@ h1 {
 }
 
 .style-button:hover {
+  scale: 1.01;
   background-image: linear-gradient(
     to top left,
-    rgb(170, 121, 230),
-    rgb(238, 161, 215)
+    rgb(179, 129, 239),
+    rgb(236, 134, 205)
   );
   box-shadow: 10px 15px 16px #b1b0b0;
-  transition: opacity 0.5s;
 }
+
 /**************************** Section Fonctionnement **************************/
 
 .etapes {
@@ -105,7 +185,6 @@ h1 {
     height: 24px;
     position: absolute;
     left: -14px;
-
     align-items: center;
     justify-content: center;
     color: #f6f6f6;
@@ -152,7 +231,7 @@ h1 {
   span {
     position: absolute;
     background-color: #99e2d0;
-    right: 42px;
+    right: 0px;
     padding: 6px;
     margin: 12px;
     color: #008766;
@@ -172,7 +251,7 @@ h1 {
   }
 }
 
-.input-coeur:checked + label .coeur-full {
+.button-coeur:hover .coeur-full {
   opacity: 1;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
@@ -180,8 +259,13 @@ h1 {
   transform: scale(1.1);
 }
 
-.input-coeur {
-  display: none;
+.button-coeur {
+  border: none;
+  background-color: transparent;
+  padding: 12px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 
 .coeur {
@@ -196,6 +280,7 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 21px;
+
   i {
     font-size: 24px;
   }
@@ -237,13 +322,22 @@ h1 {
   }
 }
 
-// ********************** media ***********************
-
 // *********** Page restaurant **************
 
 .page-bis {
   padding: 20px 20px;
 }
+
+.h2-coeur {
+  margin-bottom: 40px;
+  h2 {
+    margin: 0;
+  }
+  justify-content: center;
+  align-items: center;
+  gap: 19px;
+}
+
 .box-menu {
   flex-direction: column;
   justify-content: center;
@@ -252,7 +346,7 @@ h1 {
   padding: 50px 20px;
   width: auto;
   position: relative;
-  top: -33px;
+  top: -50px;
   h3 {
     font-weight: normal;
     text-transform: uppercase;
@@ -316,6 +410,13 @@ h1 {
   justify-content: space-between;
 }
 
+.description-plats {
+  margin-bottom: 40px;
+  h3 {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+}
 .element1-button-menu {
   flex-direction: column;
   align-self: center;
@@ -377,29 +478,60 @@ h1 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1025px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .fonctionnement {
     display: flex;
     flex-direction: column;
-    padding: 50px 70px;
+    padding: 50px 53px;
   }
 
   .etapes {
     display: flex;
     flex-direction: row;
+    gap: 25px;
+  }
+  .box-menu {
+    top: -65px;
+    padding: 50px 135px;
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
+
+  .image-plat-restaurant {
+    width: 100%;
+    height: 383px;
+    object-position: 0px 60%;
+    object-fit: cover;
+  }
+  .restaurant {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .box-etape {
+    display: flex;
   }
 }
+
 @media (min-width: 1025px) {
   .box-menu {
     margin: -32px auto;
     padding: 50px 250px;
     max-width: 560px;
+    top: -21px;
   }
-
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
   .image-plat-restaurant {
     width: 100%;
-    aspect-ratio: 1440 / 435;
-    object-position: 0px -267px;
+    height: 383px;
+    object-position: 0px 60%;
     object-fit: cover;
   }
 
@@ -413,20 +545,18 @@ h1 {
   .container {
     width: 80%;
   }
-  .articles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px 100px;
-  }
+
   .etapes {
     flex: 1;
     display: flex;
     flex-direction: row;
+    margin: 0;
+    justify-content: space-between;
     gap: 20px;
-    align-items: center;
-    justify-content: center;
   }
-
+  .titre {
+    display: flex;
+  }
   // .etapes {
   //   display: flex;
   //   flex-direction: row;
@@ -435,16 +565,16 @@ h1 {
     max-width: 300px;
   }
   .fonctionnement {
+    padding: 40px 180px;
     display: flex;
     flex-direction: column;
-    // padding: 50px 100px;
   }
 
   .box-footer {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     gap: 30px;
+    align-items: baseline;
   }
   .elements-footer {
     display: flex;
