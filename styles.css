@@ -202,7 +202,8 @@ h1 {
 .liens-cards-restaurants {
   flex-direction: column;
 }
-.liens-cards-restaurants span {
+
+.span-nouveau {
   position: absolute;
   background-color: #99e2d0;
   right: 0px;
@@ -239,6 +240,9 @@ h1 {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+}
+.button-coeur span {
+  background-color: #ffffff;
 }
 
 .coeur {

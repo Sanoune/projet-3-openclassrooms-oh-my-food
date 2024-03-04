@@ -244,14 +244,15 @@ h1 {
 
 .liens-cards-restaurants {
   flex-direction: column;
-  span {
-    position: absolute;
-    background-color: $color-green1;
-    right: 0px;
-    padding: 6px;
-    margin: 12px;
-    color: $color-green2;
-  }
+}
+
+.span-nouveau {
+  position: absolute;
+  background-color: $color-green1;
+  right: 0px;
+  padding: 6px;
+  margin: 12px;
+  color: $color-green2;
 }
 
 .box-texte-coeur {
@@ -276,6 +277,9 @@ h1 {
 }
 
 .button-coeur {
+  span {
+    background-color: $color-blanc;
+  }
   border: none;
   background-color: transparent;
   padding: 12px;
