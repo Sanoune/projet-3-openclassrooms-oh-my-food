@@ -67,19 +67,19 @@ h1 {
   }
 }
 
-// .loader {
-//   position: fixed;
-//   height: 100%;
-//   width: 100%;
-//   left: 0;
-//   top: 0;
-//   background-color: hsla(0, 0%, 100%, 0.9);
-//   z-index: 10000;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   animation: out 0.2s 4s forwards;
-// }
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: out 0.2s 4s forwards;
+}
 
 .loader-box {
   gap: 40px;
@@ -134,9 +134,9 @@ h1 {
   }
 }
 
-/**************************** Section Information acceuil **************************/
+/**************************** Section Information accueil **************************/
 
-.information-acceuil {
+.information-accueil {
   background-color: $color-gris;
   padding: 53px 20px;
   text-align: center;
@@ -273,7 +273,7 @@ h1 {
   background: linear-gradient($color-violet, $color-rose);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .button-coeur {
