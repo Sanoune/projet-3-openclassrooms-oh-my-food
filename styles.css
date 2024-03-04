@@ -14,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 .flex {
@@ -33,6 +33,28 @@ h1 {
   box-shadow: 0 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+    background-color: #89c8fa;
+  }
+  50% {
+    transform: translateY(-2rem);
+    background-color: #9356dc;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: #003a68;
+  }
+}
+@keyframes out {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 .loader-box {
   gap: 40px;
   display: flex;
@@ -46,41 +68,46 @@ h1 {
 }
 
 .loader-element-1 {
-  background-color: #99e2d0;
   animation-delay: 0.1s;
 }
 
 .loader-element-2 {
-  background-color: #99e2d0;
   animation-delay: 0.2s;
 }
 
 .loader-element-3 {
-  background-color: #99e2d0;
   animation-delay: 0.3s;
 }
 
 .loader-element-4 {
-  background-color: #99e2d0;
   animation-delay: 0.4s;
 }
 
 /**************************** Header **************************/
-.centrer-header {
+.centrer {
+  align-items: center;
   justify-content: center;
-  padding: 30px;
 }
 
 .location {
-  background-color: #f2f2f2;
+  background-color: #eaeaea;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 15px;
+}
+.location i {
+  font-size: 20px;
+}
+.location .box-location {
+  gap: 12px;
+}
+
+.logo img {
+  padding: 30px;
 }
 
 /**************************** Section Information acceuil **************************/
 .information-acceuil {
-  background-color: #f2f2f2;
-  padding: 53px 60px;
+  background-color: #f6f6f6;
+  padding: 53px 20px;
   text-align: center;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -89,9 +116,8 @@ h1 {
 }
 
 .style-button {
-  transition: 1s;
   margin-top: 15px;
-  padding: 15px 50px;
+  padding: 15px 30px;
   border-radius: 25px;
   border: none;
   cursor: pointer;
@@ -106,7 +132,7 @@ h1 {
 
 .style-button:hover {
   scale: 1.01;
-  background-image: linear-gradient(to top left, rgb(179, 129, 239), rgb(236, 134, 205));
+  background-image: linear-gradient(to top left, rgb(171, 111, 246), rgb(236, 134, 205));
   box-shadow: 10px 15px 16px #b1b0b0;
 }
 
@@ -148,13 +174,17 @@ h1 {
   padding-left: 15px;
 }
 
+.shop {
+  color: #9356dc;
+}
+
 /**************************** Section Restaurants **************************/
 .restaurant {
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   padding: 80px 12px;
 }
 .restaurant article {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 15px;
   margin-top: 18px;
 }
@@ -228,6 +258,13 @@ h1 {
   font-size: 24px;
 }
 
+.coeur-stable {
+  opacity: 1;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .box-coeurs * {
   position: absolute;
 }
@@ -238,15 +275,15 @@ h1 {
 }
 .box-footer h3 {
   font-weight: normal;
-  color: white;
+  color: #ffffff;
   font-family: "Shrikhand";
   margin: 8px 0px;
 }
 .box-footer span {
-  color: white;
+  color: #ffffff;
 }
 .box-footer i {
-  color: white;
+  color: #ffffff;
 }
 
 .elements-footer {
@@ -281,10 +318,13 @@ h1 {
   justify-content: center;
   background-color: #f6f6f6;
   border-radius: 30px 30px 0px 0px;
-  padding: 50px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: -79px;
   width: auto;
   position: relative;
-  top: -50px;
 }
 .box-menu h3 {
   font-weight: normal;
@@ -300,7 +340,7 @@ h1 {
 }
 
 .page-individuelle {
-  background: white;
+  background: #ffffff;
 }
 
 .box-plat {
@@ -349,6 +389,7 @@ h1 {
 }
 
 .description-plats {
+  animation: afficheMenu ease-in 2s backwards;
   margin-bottom: 40px;
 }
 .description-plats h3 {
@@ -356,10 +397,36 @@ h1 {
   margin-top: 0px;
 }
 
+@keyframes afficheMenu {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.description-plats.entree {
+  animation-delay: 0.1s;
+}
+
+.description-plats.plat {
+  animation-delay: 0.5s;
+}
+
+.description-plats.dessert {
+  animation-delay: 1s;
+}
+
 .element1-button-menu {
   flex-direction: column;
   align-self: center;
   padding: 12px;
+}
+.element1-button-menu .titre-plat {
+  font-weight: bold;
+}
+.element1-button-menu span {
+  display: flex;
 }
 
 .element2-button-menu {
@@ -369,6 +436,7 @@ h1 {
 }
 .element2-button-menu p {
   margin: 0;
+  font-weight: bold;
 }
 
 .box-choix-menu:hover .cloche-menu {
@@ -385,13 +453,13 @@ h1 {
   width: 0px;
 }
 .cloche-menu i {
-  color: #f2f2f2;
-  -webkit-text-fill-color: #f2f2f2;
+  color: #f6f6f6;
+  -webkit-text-fill-color: #f6f6f6;
 }
 
 .button-commander {
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .animation-test:hover .agrandissement {
@@ -414,6 +482,31 @@ h1 {
     padding: 40px 20px;
   }
 }
+@media (min-width: 992px) {
+  .box-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 80px;
+    align-items: baseline;
+  }
+  .elements-footer {
+    display: flex;
+    flex-flow: row;
+    gap: 30px;
+  }
+  .elements-footer .span-footer {
+    margin-left: 0px;
+  }
+  .elements-footer .element {
+    gap: 10px;
+  }
+  .location {
+    box-shadow: none;
+  }
+  .information-acceuil {
+    box-shadow: none;
+  }
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .fonctionnement {
     display: flex;
@@ -426,7 +519,6 @@ h1 {
     gap: 25px;
   }
   .box-menu {
-    top: -65px;
     padding: 50px 135px;
   }
   .articles {
@@ -450,10 +542,15 @@ h1 {
 }
 @media (min-width: 1025px) {
   .box-menu {
-    margin: -32px auto;
-    padding: 50px 250px;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -79px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 560px;
-    top: -21px;
   }
   .articles {
     display: grid;
