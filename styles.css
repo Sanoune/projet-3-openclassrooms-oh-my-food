@@ -36,11 +36,11 @@ h1 {
 @keyframes jump {
   0% {
     transform: translateY(0);
-    background-color: #89c8fa;
+    background-color: #003a68;
   }
   50% {
     transform: translateY(-2rem);
-    background-color: #9356dc;
+    background-color: #ff79da;
   }
   100% {
     transform: translateY(0);
@@ -115,7 +115,7 @@ h1 {
 }
 
 .logo img {
-  padding: 30px;
+  padding: 25px;
 }
 
 /**************************** Section Information accueil **************************/
@@ -305,6 +305,7 @@ h1 {
 }
 
 .elements-footer {
+  display: flex;
   flex-direction: column;
   gap: 6px;
   margin: 2px;
@@ -323,11 +324,11 @@ h1 {
 
 .h2-coeur {
   margin-bottom: 40px;
-  justify-content: center;
   align-items: center;
-  gap: 19px;
+  justify-content: space-between;
 }
 .h2-coeur h2 {
+  font-size: 28px;
   margin: 0;
 }
 
@@ -388,7 +389,6 @@ h1 {
 
 .box-choix-menu {
   text-decoration: none;
-  flex: 1;
   border-radius: 15.4px;
   border: none;
   background-color: #ffffff;
@@ -402,6 +402,7 @@ h1 {
 .button-choix-menu {
   background-color: transparent;
   border: none;
+  cursor: pointer;
   flex: 1;
   justify-content: space-between;
 }
@@ -441,10 +442,19 @@ h1 {
   padding: 12px;
 }
 .element1-button-menu .titre-plat {
+  font-size: 17px;
   font-weight: bold;
+  max-width: 230px;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: justify;
 }
-.element1-button-menu span {
-  display: flex;
+.element1-button-menu .description-plat {
+  text-align: justify;
+  font-size: 14px;
+  display: inline-block;
+  max-width: 230px;
+  white-space: nowrap;
 }
 
 .element2-button-menu {
@@ -452,7 +462,7 @@ h1 {
   padding-bottom: 12px;
   padding-right: 5px;
 }
-.element2-button-menu p {
+.element2-button-menu span {
   margin: 0;
   font-weight: bold;
 }
@@ -461,11 +471,21 @@ h1 {
   width: 50px;
 }
 
+.box-choix-menu:hover .description-plat {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box-choix-menu:hover .titre-plat {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .cloche-menu {
   overflow: hidden;
   justify-content: center;
-  transition: width 2s;
-  padding: 22px 0px;
+  transition: width 0.5s;
+  padding: 27px 0px;
   border-radius: 0px 15.4px 15.4px 0px;
   background-color: #99e2d0;
   width: 0px;
@@ -476,8 +496,13 @@ h1 {
 }
 
 .button-commander {
+  display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  align-items: center;
+}
+.button-commander .style-button {
+  margin-top: 0px;
 }
 
 .animation-test:hover .agrandissement {
@@ -501,6 +526,19 @@ h1 {
   }
 }
 @media (min-width: 992px) {
+  .box-choix-menu:hover .description-plat {
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .box-choix-menu:hover .titre-plat {
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .h2-coeur {
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
   .box-footer {
     display: flex;
     flex-direction: row-reverse;
@@ -521,7 +559,7 @@ h1 {
   .location {
     box-shadow: none;
   }
-  .information-acceuil {
+  .information-accueil {
     box-shadow: none;
   }
 }
@@ -564,7 +602,7 @@ h1 {
     padding-right: 250px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: -79px;
+    margin-top: -41px;
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -597,7 +635,7 @@ h1 {
     flex-direction: row;
     margin: 0;
     justify-content: space-between;
-    gap: 20px;
+    gap: 25px;
   }
   .titre {
     display: flex;
