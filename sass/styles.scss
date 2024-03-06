@@ -268,7 +268,8 @@ h1 {
   }
 }
 
-.button-coeur:hover .coeur-full {
+.button-coeur:hover .coeur-full,
+.button-coeur:focus .coeur-full {
   opacity: 1;
   background: linear-gradient($color-violet, $color-rose);
   background-clip: text;
