@@ -66,7 +66,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: out 0.2s 4s forwards;
+  animation: out 4s forwards;
 }
 
 .loader-box {
@@ -75,7 +75,7 @@ h1 {
 }
 
 .loader-box * {
-  animation: jump 1s 5;
+  animation: jump 1s infinite;
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -120,10 +120,13 @@ h1 {
 
 /**************************** Section Information accueil **************************/
 .information-accueil {
+  align-items: center;
   background-color: #f6f6f6;
   padding: 53px 20px;
   text-align: center;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
 }
 .information-accueil h3 {
   font-weight: normal;
@@ -195,7 +198,7 @@ h1 {
 /**************************** Section Restaurants **************************/
 .restaurant {
   background-color: #f6f6f6;
-  padding: 80px 12px;
+  padding: 40px 20px;
 }
 .restaurant article {
   background-color: #ffffff;
@@ -453,7 +456,7 @@ h1 {
   text-align: justify;
   font-size: 14px;
   display: inline-block;
-  max-width: 230px;
+  max-width: 180px;
   white-space: nowrap;
 }
 
@@ -479,6 +482,7 @@ h1 {
 .box-choix-menu:hover .titre-plat {
   overflow: hidden;
   text-overflow: ellipsis;
+  max-width: 180px;
 }
 
 .cloche-menu {
@@ -520,9 +524,37 @@ h1 {
   transform: scale(1.2, 1.2);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 53px;
+  }
+  .etapes {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+  .box-menu {
+    padding: 50px 135px;
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
+  .image-plat-restaurant {
+    width: 100%;
+    height: 383px;
+    object-position: 0px 60%;
+    object-fit: cover;
+  }
   .restaurant {
-    padding: 40px 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .box-etape {
+    display: flex;
   }
 }
 @media (min-width: 992px) {
@@ -561,39 +593,6 @@ h1 {
   }
   .information-accueil {
     box-shadow: none;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .fonctionnement {
-    display: flex;
-    flex-direction: column;
-    padding: 50px 53px;
-  }
-  .etapes {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-  }
-  .box-menu {
-    padding: 50px 135px;
-  }
-  .articles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px 100px;
-  }
-  .image-plat-restaurant {
-    width: 100%;
-    height: 383px;
-    object-position: 0px 60%;
-    object-fit: cover;
-  }
-  .restaurant {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-  .box-etape {
-    display: flex;
   }
 }
 @media (min-width: 1025px) {
