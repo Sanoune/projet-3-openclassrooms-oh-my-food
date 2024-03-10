@@ -242,7 +242,8 @@ h1 {
   margin: 0px;
 }
 
-.button-coeur:hover .coeur-full {
+.button-coeur:hover .coeur-full,
+.button-coeur:focus .coeur-full {
   opacity: 1;
   background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
@@ -408,6 +409,7 @@ h1 {
   cursor: pointer;
   flex: 1;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .description-plats {
