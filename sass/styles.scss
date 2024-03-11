@@ -169,7 +169,7 @@ h1 {
 }
 
 .style-button:hover {
-  scale: 1.01;
+  transform: scale(1.01);
   background-image: linear-gradient(
     to top left,
     rgb(171, 111, 246),
